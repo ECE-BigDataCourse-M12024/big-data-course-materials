@@ -1,5 +1,3 @@
-Voici la traduction en français :
-
 # Matériel de cours sur le Big Data
 
 Bienvenue dans le dépôt du matériel de cours sur le Big Data ! Ce dépôt contient toutes les ressources dont vous aurez besoin pour notre cours de 36 heures réparti sur 12 semaines.
