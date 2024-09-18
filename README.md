@@ -34,10 +34,14 @@ Soumettez vos exercices complétés en les poussant vers votre fork personnel de
 
 ## Logiciels requis
 
-- Python 3.8+
-- Apache Spark
-- Docker
+- VSCode
 - Git
+- Python 3.8+
+- Docker
+- Java 1.8
+- Hadoop 3.3.6
+- Apache Spark 3.5.0
+- HBase 2.5.8
 
 Des instructions d'installation détaillées sont disponibles dans le répertoire `/guide-installation`.
 
