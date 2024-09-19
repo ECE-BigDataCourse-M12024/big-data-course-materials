@@ -4,8 +4,8 @@ Bienvenue dans le dépôt du matériel de cours sur le Big Data ! Ce dépôt con
 
 ## Structure du dépôt
 
-- `/cours` : Diapositives et notes pour chaque cours
-- `/exercices` : Exercices pratiques et leurs solutions
+- `/cours` : Diapositives et notes pour chaque cours (les supports seront rajoutés à l'issue de chaque cours)
+- `/exercices` : Exercices pratiques (ou TPs) et leurs solutions
 - `/ressources` : Matériels de lecture supplémentaires et références
 - `/guide-installation` : Instructions d'installation pour les logiciels requis
 
@@ -34,14 +34,12 @@ Soumettez vos exercices complétés en les poussant vers votre fork personnel de
 
 ## Logiciels requis
 
-- VSCode
-- Git
 - Python 3.8+
+- VSCode
 - Docker
 - Java 1.8
 - Hadoop 3.3.6
 - Apache Spark 3.5.0
-- HBase 2.5.8
 
 Des instructions d'installation détaillées sont disponibles dans le répertoire `/guide-installation`.
 
@@ -56,8 +54,7 @@ Des instructions d'installation détaillées sont disponibles dans le répertoir
 Si vous rencontrez des problèmes ou avez des questions :
 
 1. Consultez la section FAQ de ce README
-2. Publiez dans le groupe de discussion Teams (lien à fournir)
-3. Contactez l'instructeur (J. Ndetcho) pendant les heures de permanence
+2. Contactez l'instructeur (J. Ndetcho) pendant les heures de permanence ou par email: jndetcho@omnesintervenant.com
 
 ## FAQ
 
