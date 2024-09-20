@@ -1,0 +1,13 @@
+site_name: ECE Big Data 2024/2025
+site_description: Les supports de cours de Big Data
+site_author: Jordan Ndetcho
+
+# Repository
+repo_name: ECE-BigDataCourse-M12024/big-data-course-materials
+repo_url: https://github.com/ECE-BigDataCourse-M12024/big-data-course-materials
+
+# Page tree
+pages:
+   - Détails du cours de Big Data: 'index.md'
+   - Cours 1: 'cours1.md'
+theme: material

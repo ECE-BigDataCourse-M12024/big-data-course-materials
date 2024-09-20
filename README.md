@@ -4,7 +4,7 @@ Bienvenue dans le dépôt du matériel de cours sur le Big Data ! Ce dépôt con
 
 ## Structure du dépôt
 
-- `/cours` : Diapositives et notes pour chaque cours (les supports seront rajoutés à l'issue de chaque cours)
+- `/docs` : Supports de cours en Markdown (les supports seront rajoutés à l'issue de chaque cours)
 - `/exercices` : Exercices pratiques (ou TPs) et leurs solutions
 - `/ressources` : Matériels de lecture supplémentaires et références
 - `/guide-installation` : Instructions d'installation pour les logiciels requis
