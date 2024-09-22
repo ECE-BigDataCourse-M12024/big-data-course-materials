@@ -32,8 +32,8 @@ Les étapes sont:
 1. **Sélection des Données**
    - Explorez diverses sources de données. 
    - Suggestions :
-     * Parcourez les ensembles de données disponibles sur des plateformes comme Kaggle.
-     * Identifiez une source de données en continu, par exemple un flux API public.
+     * Parcourez les ensembles de données disponibles sur internet. Pour vous aider et faciliter votre recherche vous pouvez sélectionner parmi l'un des services mentionné dans ce repository (qui héberge un ensemble de services mettant à disposition des données en streaming):
+      - https://github.com/bytewax/awesome-public-real-time-datasets
 
 2. **Conception de l'Architecture**
    - Esquissez votre vision de l'architecture finale.

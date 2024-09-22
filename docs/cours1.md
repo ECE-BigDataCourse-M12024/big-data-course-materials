@@ -49,7 +49,7 @@ De l'autre, sa gestion comporte de nombreux **défis**:
 Le Big Data a révolutionné le paysage économique, touchant pratiquement tous les secteurs d'activité. Son influence s'étend bien au-delà de la technologie, transformant profondément des industries diverses (Pharmaceutique, Automobile, Retail, Energie, Agriculture, Luxe, Banque etc....)
 
 
-**C.Cycle de vie de la donnée:**
+**C. Cycle de vie de la donnée:**
 La donnée étant la composante de base du Big Data, il est essentiel de comprendre son cycle de vie. Les ingénieurs en Big Data seront amené à intervenir à chaque étape de ce cycle.
 
 -1. Génération/Carthographie des sources > 2. Collecte et acquisition > 3. Stockage > 4. Traitement > 5. management (conformité, qualité, uniformisation, confidentialité etc...) > 6. Analyse > 7. Interprétation et visualisation > 8. Archivage/Suppression
@@ -144,11 +144,14 @@ On peut classer les outils de Big Data dans les familles suivantes:
 	- Complémentarité : L'encodage assure que les données peuvent être correctement lues au niveau binaire.
 
 
-**B. Concepts liés au transfert des données à travers le réseau:
+**B. Concepts liés au transfert des données à travers le réseau:**
 - **Archivage**: Regroupement de fichiers en un seul pour faciliter stockage/transfert. Les fichiers .jar (similaire à des fichiers zip mais spécifique à java) sont utilisés dans Hadoop afin d'encapsuler le code des applications Hadoop, et faciliter le déploiement et l'exécution des jobs sur le cluster. Ces archives contiennent le code et les dépendances (classes java compilées(bytecode), fichiers de configuration, bibliothèques/librairies, fichier manifest etc..) nécessaires à l'exécution du job. 
   
 - **Routage et data locality**: 
   -Le routage concerne la manière dont les données sont dirigées (routées) à travers un réseau (cluster de machines). Hadoop s'appuie sur le protocol TCP/IP afin de transporter les données et jobs d'une machine à l'autre.
+
+  ![alt text](img/cours1/partition-distrib.png)
+
   -Data locality: est une *stratégie* qui vise à rapprocher le traitement des données (jobs/tasks) de leur lieu de stockage pour réduire la latence et améliorer les performances. 
   Retenez bien, il est plus facile de déplacer les jobs/tâches plutôt que les partitions!
 
@@ -236,7 +239,7 @@ Autres composants importants:
 ### 2.2) HDFS, MapReduce et YARN
 
 #### 2.2.1) HDFS
-HDFS signifie Système de Fichiers Distribués Hadoop (Hadoop Distributed File System. 
+HDFS signifie Système de Fichiers Distribués Hadoop (Hadoop Distributed File System, un 'File System' est une méthode et une structure de données (arborescente) que le système d'exploitation utilise pour contrôler la manière dont les données sont stockées et récupérées sur un dispositif de stockage, tel qu'un disque dur, un disque SSD ou même un stockage en nuage.). 
 Il assure le **stockage des données sur Hadoop**. Toutes donnée stockée est subdivisée par HDFS  en unités plus petites appelées blocs puis opère à son stockage **sur disque** de manière distribuée (ie réparti sur plusieurs machines/noeuds). 
 
 Pour fonctionner, HDFS s'appuie sur 2 daemons: 
@@ -298,6 +301,37 @@ Yarn divise les tâches de gestion des ressources et de planification/surveillan
 Chaque application/Job (MapReduce, Spark, Hive etc...) se voit attribué un **ApplicationMaster** pendant la durée d'exécution du job. Une application étant un job ou un DAG (graphe composée de plusieurs jobs séquencés) de jobs. 
 L'applicationMaster est un processus crée par le ResourceManager de YARN afin de gérer la négociation des ressources (avec le ResourceManager), mais aussi surveiller l'exécution et redémarrer un conteneur en cas d'incident de l'application concernée (en collaboration avec le NodeManager). Si un ApplicationMaster échoue, le ResourceManager peut le relancer.
 
+Vous remarquerez que le ResourceManager est le chef d'orchestre de tout cela, s'il crash, aucune application ne peut plus s'exécuter sur le cluster. YARN dispose d'un mode dit "HA" (High Availability). C'est une configuration qui vise à éliminer le point unique de défaillance (Single Point Of Failure) dans un cluster Hadoop en permettant l'exécution de multiples instances du ResourceManager. Pour cela, il s'appuie sur Apache Zookeeper. 
+
+
+### 2.3) Zookeeper 
+
+Apache ZooKeeper est un service centralisé permettant de maintenir les informations de configuration, de nommage, de synchronisation distribuée et de services de groupe dans les systèmes distribués.
+Autrement dit, il assure la coordination distribuée nécessaire au mode HA de YARN, garantissant que le cluster reste opérationnel même si les instances individuelles de ResourceManager tombent en panne. Il agit comme un service fiable et centralisé pour maintenir l'état partagé critique et gérer l'élection du leader parmi les composants YARN.
+
+![alt text](img/cours1/zookeeper.png)
+
+1. Mode haute disponibilité (HA) :
+   - Le mode HA garantit qu'un service reste opérationnel même si l'une de ses instances tombe en panne.
+   - Dans le contexte du YARN, il s'agit typiquement d'avoir plusieurs instances de ResourceManager pour éviter un point de défaillance unique.
+
+2. Comment ZooKeeper gère le HA :
+   - ZooKeeper maintient l'état du cluster et coordonne l'élection du leader.
+   - Pour YARN HA :
+     a. Plusieurs instances de ResourceManager sont configurées.
+     b. ZooKeeper détermine quelle instance est active et laquelle est en attente.
+     c. Si l'instance active tombe en panne, ZooKeeper facilite l'élection d'une nouvelle instance active parmi les instances en attente.
+   - ZooKeeper utilise son protocole de consensus pour s'assurer que tous les nœuds ont une vision cohérente du ResourceManager actif.
+
+3. Interaction de ZooKeeper avec YARN :
+   - ZooKeeper ne gère pas directement les processus YARN. Il fournit plutôt des services que YARN utilise pour l'AH :
+     a. Stockage de l'état du cluster
+     b. Élection du leader pour le ResourceManager
+     c. Clôture pour éviter les scénarios de cerveau divisé
+
+
+
+---
 Sources:
 - https://data-flair.training/blogs/hadoop-architecture/
 - https://github.com/backstreetbrogrammer/11_JavaSpark
@@ -305,3 +339,4 @@ Sources:
 - https://blog.bytebytego.com/
 - https://www.qlik.com/us/data-replication/database-replication
 - https://datascientest.com/mapreduce
+- https://www.youtube.com/watch?v=WBrAPR5JyBw&ab_channel=RishiSrivastava
