@@ -78,8 +78,8 @@ Toutes les commandes interagissant avec le système HDFS commencent par ```hdfs
 hdfs dfs –mkdir -p input
 ```
 
-??? bug "En cas d'erreur: _No such file or directory_"
-    Si pour une raison ou une autre, vous n'arrivez pas à créer le répertoire _input_, avec un message ressemblant à ceci: ```ls: `.': No such file or directory```, veiller à construire l'arborescence de l'utilisateur principal (root), comme suit:
+>bug "En cas d'erreur: _No such file or directory_"
+    >Si pour une raison ou une autre, vous n'arrivez pas à créer le répertoire _input_, avec un message ressemblant à ceci: ```ls: `.': No such file or directory```, veiller à construire l'arborescence de l'utilisateur principal (root), comme suit:
 
     ``` hdfs dfs -mkdir -p /user/root```
 
@@ -152,8 +152,8 @@ Nous allons tester un programme MapReduce grâce à un exemple très simple, le 
 
 Commençons par créer un projet Maven dans VSCode. **Nous utiliserons dans notre cas JDK 1.8**.
 
-??? info "Version de JDK"
-    Ceci n'est pas une suggestion: l'utilisation d'une autre version que 1.8 provoquera des erreurs sans fin. Hadoop est compilé avec cette version de Java, connue pour sa stabilité. 
+>info "Version de JDK"
+>Ceci n'est pas une suggestion: l'utilisation d'une autre version que 1.8 provoquera des erreurs sans fin. Hadoop est compilé >avec cette version de Java, connue pour sa stabilité. 
 
 Pour créer un projet Maven dans VSCode: 
 
@@ -310,7 +310,7 @@ Dans votre projet sur VSCode:
     ```json
     "args": ["wordcount/src/main/resources/input/file.txt","wordcount/src/main/resources/output"]
     ```
-    ???note "Arguments"
+    >note "Arguments"
         Il est à noter que, dans mon cas, le fichier _launch.json_ a été créé sous le répertoire _TP1_, c'est pour cette raison que le chemin des fichiers commence par "wordcount". Si vous créez la configuration directement sous le répertoire _wordcount_, il faudra commencer le chemin par _src_.
 
   * Sélectionner ensuite, dans la liste des configurations du projet, _WordCount_ comme configuration par défaut:
