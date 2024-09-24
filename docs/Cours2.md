@@ -6,7 +6,7 @@
 **A. Introduction:**
 
 **Spark** est un :
-- **framework, open-source** conçu pour le **traitement** distribué de grandes quantités de données (Big Data) sur des clusters de machines. 
+- **framework, open-source** conçu pour le **traitement** distribué de calcul sur de grandes quantités de données (Big Data) sur des clusters de machines. 
 - Il s'appuie sur la mise en **cache en mémoire**, et la création et exécution de **requêtes optimisées** pour traiter efficacement ces grosses volumétries de données. 
 - Il fournit des API de développement en **Java, Scala, Python et R**. 
 - Il permet d'effectuer une grande variété de tâches: traitement par lots, requêtes interactives, analytique en temps réel, machine learning et traitement de graphes.
