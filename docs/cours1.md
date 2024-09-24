@@ -155,7 +155,7 @@ On peut classer les outils de Big Data dans les familles suivantes:
   -Data locality: est une *stratégie* qui vise à rapprocher le traitement des données (jobs/tasks) de leur lieu de stockage pour réduire la latence et améliorer les performances. 
   Retenez bien, il est plus facile de déplacer les jobs/tâches plutôt que les partitions!
 
-- **Sérialisation (et désérialisation):** Processus de conversion d'objets complexes (classe, un dataframe etc...) en séquences d'octets pour le stockage ou la transmission, permettant leur reconstruction ultérieure (désérialisation).
+- **Sérialisation (et désérialisation):** Processus de conversion d'objets complexes (classe, un dataframe etc...) en séquences d'octets **pour le stockage ou la transmission**, permettant leur reconstruction ultérieure (désérialisation).
     - Techniques : Java Serialization, Protocol Buffers, Thrift, Avro
     - Intérêt en Big Data :
         - Permet le transfert efficace d'objets complexes (instances de classes, enregistrements, paires clé-valeurs, résultats intermédiaires ...) entre nœuds d'un cluster
@@ -195,7 +195,7 @@ On peut classer les outils de Big Data dans les familles suivantes:
 **Hadoop** est un :
 - **framework**: 'cadre de travail' composé d'un ensemble de bibliothèques, d'outils, de conventions de codage, et de modèles de conception qui simplifient et accélèrent le processus de développement logiciel
 - **open-source**: conçu pour être accessible au public, n'importe qui peut voir, modifier et distribuer le code comme il l'entend.
-- conçu pour le stockage et le traitement distribués de grandes quantités de données (Big Data) sur des clusters de machines ordinaires. 
+- conçu pour le stockage et le traitement distribué de grandes quantités de données (Big Data) sur des clusters de machines ordinaires. 
 Il a été développé par la Apache Software Foundation et est devenu l'un des outils les plus populaires pour gérer le Big Data.
 
 Hadoop sert principalement à :
@@ -299,7 +299,7 @@ Yarn divise les tâches de gestion des ressources et de planification/surveillan
   NodeManager -> ApplicationMaster: transmet des informations détaillées sur les conteneurs spécifiques à l'application.
 
 Chaque application/Job (MapReduce, Spark, Hive etc...) se voit attribué un **ApplicationMaster** pendant la durée d'exécution du job. Une application étant un job ou un DAG (graphe composée de plusieurs jobs séquencés) de jobs. 
-L'applicationMaster est un processus crée par le ResourceManager de YARN afin de gérer la négociation des ressources (avec le ResourceManager), mais aussi surveiller l'exécution et redémarrer un conteneur en cas d'incident de l'application concernée (en collaboration avec le NodeManager). Si un ApplicationMaster échoue, le ResourceManager peut le relancer.
+**L'applicationMaster est un processus crée par le ResourceManager de YARN afin de gérer la négociation des ressources** (avec le ResourceManager), mais aussi surveiller l'exécution et redémarrer un conteneur en cas d'incident de l'application concernée (en collaboration avec le NodeManager). Si un ApplicationMaster échoue, le ResourceManager peut le relancer.
 
 Vous remarquerez que le ResourceManager est le chef d'orchestre de tout cela, s'il crash, aucune application ne peut plus s'exécuter sur le cluster. YARN dispose d'un mode dit "HA" (High Availability). C'est une configuration qui vise à éliminer le point unique de défaillance (Single Point Of Failure) dans un cluster Hadoop en permettant l'exécution de multiples instances du ResourceManager. Pour cela, il s'appuie sur Apache Zookeeper. 
 
