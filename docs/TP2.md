@@ -67,7 +67,7 @@ Charger ensuite ce fichier dans HDFS:
 hdfs dfs -put file1.txt
 ```
 
-??? error "Erreur possible"
+> error "Erreur possible"
       Si le message suivant s'affiche: ```put: `.': No such file or directory```, c'est parce que l'arborescence du répertoire principal n'est pas créée dans HDFS. Pour le faire, il suffit d'exécuter la commande suivante avant la commande de chargement :
       ```hadoop fs mkdir -p . ```
 
@@ -230,7 +230,7 @@ Nous allons dans cette partie créer un projet Spark Batch en Java (un simple Wo
     * _appName_ est le nom de l'application
     * _master_ est une URL d'un cluster Spark, Mesos ou YARN, ou bien une chaîne spéciale _local_ pour lancer le job en mode local.
 
-!!! warning
+> warning
       Nous avons indiqué ici que notre master est _local_ pour les besoins du test, mais plus tard, en le packageant pour le cluster, nous allons enlever cette indication. Il est en effet déconseillé de la hard-coder dans le programme, il faudrait plutôt l'indiquer comme option de commande à chaque fois que nous lançons le job.
 
     Le reste du code de l'application est la version en Java de l'exemple en scala que nous avions fait avec spark-shell.
@@ -292,7 +292,7 @@ spark-submit  --class spark.batch.tp21.WordCountTask --master local wordcount-sp
   * Nous allons lancer le job en mode local, pour commencer.
   * Le fichier en entrée est le fichier purchases.txt (que vous déjà chargé dans HDFS dans le TP précédent), et le résultat sera stocké dans un nouveau répertoire _out-spark_.
 
-!!!warning "Attention"
+>warning "Attention"
       Vérifiez bien que le fichier _purchases_ existe dans le répertoire input de HDFS (et que le répertoire _out-spark_ n'existe pas)!
       Si ce n'est pas le cas, vous pouvez le charger avec les commandes suivantes:
       ```
@@ -315,5 +315,5 @@ Nous allons maintenant tester le comportement de _spark-submit_ si on l'exécute
 
 Si tout se passe bien, vous devriez obtenir un répertoire out-spark2 dans HDFS avec les fichiers usuels.
 
-???bug "En cas d'erreur: consulter les logs!"
+>bug "En cas d'erreur: consulter les logs!"
       En cas d'erreur ou d'interruption du job sur Yarn, vous pourrez consulter les fichiers logs pour chercher le message d'erreur (le message affiché sur la console n'est pas assez explicite). Pour cela, sur votre navigateur, aller à l'adresse: ```http://localhost:8041/logs/userlogs```et suivez toujours les derniers liens jusqu'à _stderr_.

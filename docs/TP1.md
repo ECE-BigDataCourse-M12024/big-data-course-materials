@@ -392,7 +392,7 @@ Il est également possible de voir le comportement des noeuds workers, en allant
 
 ![Job MR](img/tp1/worker-mr.png)
 
-!!! note "Application"
+>note "Application"
     Écrire un Job Map Reduce permettant, à partir du fichier _purchases_ initial, de déterminer le total des ventes par magasin. Il est à noter que la structure du fichier _purchases_ est de la forme suivante:
     ```
       date   temps   magasin   produit   cout   paiement
