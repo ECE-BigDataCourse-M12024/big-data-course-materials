@@ -305,7 +305,7 @@ Dans votre projet sur VSCode:
   Hello Hadoop!
 ```
   * Nous allons maintenant définir des arguments à la méthode Main: le fichier en entrée sur lequel Map reduce va travailler, et le répertoire en sortie dans lequel le résultat sera stocké. Pour cela:
-    * Ouvrir le fichier launch.json de votre projet (Aller à la fenêtre _Run and Debug_ ![Launch and Debug](image.png), puis cliquer sur _create a launch.json file_).
+    * Ouvrir le fichier launch.json de votre projet (Aller à la fenêtre _Run and Debug_ ![Launch and Debug](img/tp1/image_debug.png), puis cliquer sur _create a launch.json file_).
     * Ajouter la ligne suivante dans la configuration **WordCount**, dont la classe principale est _hadoop.mapreduce.tp1.WordCount_: 
     ```json
     "args": ["wordcount/src/main/resources/input/file.txt","wordcount/src/main/resources/output"]
