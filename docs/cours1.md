@@ -289,7 +289,7 @@ NB: A noter que les résultats intermédiaires tout comme finaux sont stockés s
 Un exemple classique est le programme WordCount (que nous verrons lors du TP1). La fonction Map émet un 1 pour chaque mot rencontré. La fonction Reduce somme ces 1 pour chaque mot unique, donnant ainsi le compte total de chaque mot dans le texte.
 
 #### 2.2.3) YARN
-YARN (Yet Another Resource Negotiator) est le gestionnaire de ressources et planificateur de tâches du framework Hadoop. Il a été conçu pour séparer la gestion des ressources du traitement des données, offrant ainsi une plus grande flexibilité et efficacité dans l'utilisation des ressources du cluster.
+YARN (Yet Another Resource Negotiator) est le gestionnaire de ressources et planificateur de tâches du framework Hadoop. Il a été conçu pour séparer la gestion des ressources du traitement des données, offrant ainsi une plus grande flexibilité et efficacité dans l'utilisation des ressources du cluster. Yarn se charge de l'allocation de conteneurs ie de ressource pour le traitement et calcul (CPU et mémoire). 
 
 Yarn divise les tâches de gestion des ressources et de planification/surveillance des travaux en 2 daemons distincts: 
 - **ResourceManager**: il tourne sur le master node YARN et son rôle est d'arbitrer les ressources entre toutes les applications concurrentes du système (applications MapReduce ou Spark, Hive, Pig etc....). Il gère et alloue les ressources du cluster de manière globale. C'est lui qui indique sur quel nœud esclave faire tourner une application en fonction des disponibilités du cluster. Il décide aussi quelles applications ont priorité en cas de conflit de ressources.
