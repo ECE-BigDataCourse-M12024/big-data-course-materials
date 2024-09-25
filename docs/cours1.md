@@ -140,7 +140,10 @@ On peut classer les outils de Big Data dans les familles suivantes:
 	    - Exemples: .txt, .csv, .html
 	-Relation entre encodage et format :
 	- L'encodage est utilisé au sein d'un format : Par exemple, un fichier JSON (format) peut contenir du texte encodé en UTF-8 (encodage).
-	- Le format peut spécifier l'encodage : Certains formats, comme XML, permettent de déclarer l'encodage utilisé (e.g., <?xml version="1.0" encoding="UTF-8"?>).
+	- Le format peut spécifier l'encodage : Certains formats, comme XML, permettent de déclarer l'encodage utilisé e.g.,
+	```xml
+	<?xml version="1.0" encoding="UTF-8"?>
+	```
 	- Complémentarité : L'encodage assure que les données peuvent être correctement lues au niveau binaire.
 
 
