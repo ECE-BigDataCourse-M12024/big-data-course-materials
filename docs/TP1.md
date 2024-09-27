@@ -399,4 +399,8 @@ Il est également possible de voir le comportement des noeuds workers, en allant
 
 
 ---
+requirements: 
+- Install jdk17: https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
+- Set settings for java home in vscode:
+![Config Info](img/tp1/config_settings_vscode.png)
 Source: https://insatunisia.github.io/TP-BigData/tp1/
