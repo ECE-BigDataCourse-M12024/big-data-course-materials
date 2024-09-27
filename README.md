@@ -57,8 +57,24 @@ Si vous rencontrez des problèmes ou avez des questions :
 2. Contactez l'instructeur (J. Ndetcho) pendant les heures de permanence ou par email: jndetcho@omnesintervenant.com
 
 ## FAQ
-
+#### 1. Problèmes d'installation Docker: 
+- Unexpected WSL Error:
+> Essayer de mettre à jour WSL (Windows Subsystem for Linux), en téléchargeant via le lien suivant: https://github.com/microsoft/WSL/releases
 (questions fréquemment posées ici au fur et à mesure qu'elles se présentent pendant le cours)
+- Make sure to enable Hyper-V:
+```
+bcdedit /set hypervisorlaunchtype auto
+shutdown /r /t 0
+```
+- S'assurer que l'option CPU-SVM du BIOS est activée
+```bash
+systeminfo
+```
+ou
+```powershell
+(Get-CimInstance -ClassName Win32_Processor).VMMonitorModeExtensions
+``` 
+- Si l'erreur persiste, essayez de réinstaller Docker, en décommentant 'recommended WSL' lors de la réinstallation.
 
 ## Licence
 
