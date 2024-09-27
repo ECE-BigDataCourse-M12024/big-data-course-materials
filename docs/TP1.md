@@ -79,9 +79,7 @@ hdfs dfs –mkdir -p input
 ```
 
 >bug "En cas d'erreur: _No such file or directory_"
-    >Si pour une raison ou une autre, vous n'arrivez pas à créer le répertoire _input_, avec un message ressemblant à ceci: ```ls: `.': No such file or directory```, veiller à construire l'arborescence de l'utilisateur principal (root), comme suit:
-
-    ``` hdfs dfs -mkdir -p /user/root```
+    >Si pour une raison ou une autre, vous n'arrivez pas à créer le répertoire _input_, avec un message ressemblant à ceci: ```ls: `.': No such file or directory```, veiller à construire l'arborescence de l'utilisateur principal (root), comme suit: hdfs dfs -mkdir -p /user/root
 
   - Nous allons utiliser le fichier  [purchases.txt](https://github.com/CodeMangler/udacity-hadoop-course/raw/master/Datasets/purchases.txt.gz) comme entrée pour le traitement MapReduce. 
   - Commencer par décompresser le fichier sur votre machine, puis par le charger dans le contenaire ```hadoop-master``` avec la commande suivante:
