@@ -386,7 +386,7 @@ Il vous est possible de monitorer vos Jobs Map Reduce, en allant à la page: ```
 
 ![Job MR](img/tp1/job-mr.png)
 
-Il est également possible de voir le comportement des noeuds workers, en allant à l'adresse: ```http://localhost:8041``` pour _worker1_, et ```http://localhost:8042``` pour _worker2_. Vous obtiendrez ce qui suit:
+Il est également possible de voir le comportement des noeuds workers, en allant à l'adresse: ```http://localhost:8040``` pour _worker1_, et ```http://localhost:8041``` pour _worker2_. Vous obtiendrez ce qui suit:
 
 ![Job MR](img/tp1/worker-mr.png)
 
