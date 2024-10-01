@@ -116,7 +116,7 @@ Comparaison :
 - Évaluées paresseusement (lazy).
 - Exemples : map(), filter(), groupBy(), union(), reduceBy().
 
-![alt text](img/cours2/transformation_examples.PNG)
+>![alt text](img/cours2/transformation_examples.PNG)
 
 
 **Actions** :
@@ -124,10 +124,10 @@ Comparaison :
 - Exemples : count(), collect(), save(), first().
   Les résultats des actions sont stockés sur la machine qui run (exécute) généralement le driver (donc attention au niveau de la gestion mémoire!). Plus exactement, le résultat est collecté à partir des exécuteurs et est envoyé au driver. 
 
-![alt text](img/cours2/actions_example.PNG)
+>![alt text](img/cours2/actions_example.PNG)
 
 
->![alt text](img/cours2/RDDOperations.png)
+![alt text](img/cours2/RDDOperations.png)
 
 
 
