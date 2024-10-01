@@ -177,6 +177,7 @@ L'objet SparkSession introduit avec Spark 2.0 **combine tous ces objets en un se
 
 ![alt text](img/cours2/spark_components_and_archi.PNG)
 
+>NB: Il est important d'appeler un stop() lorsque vous avez terminé votre application Spark, afin de s'assurer que les ressources sont correctement libérées et que l'application Spark se termine de manière élégante. (Cela arrêtera donc les processus JVMs librérant les ressources pour d'autres applications).
 
 #### 1.3.2)  Fonctionnement global
 
@@ -234,6 +235,11 @@ Spark est agnostique par rapport au gestionnaire de cluster sous-jacent. Tant qu
 - **YARN** : Utilise le gestionnaire de ressources de Hadoop.
 - **Mesos** : Utilise Apache Mesos comme gestionnaire de ressources.
 - **Kubernetes** : Déploiement sur un cluster Kubernetes.
+
+Plus d'informations sur comment connecté Spark avec un autre gestionnaire/négociateur de ressources:
+https://spark.apache.org/docs/latest/submitting-applications.html#master-urls
+
+![alt text](img/cours2/spark_master_setup.PNG)
 
 Nb: 
 >Etant donné que le driver planifie les tâches sur le cluster, en pratique on préfère l'exécuter à proximité des workers nodes, idéalement sur le même réseau local.
