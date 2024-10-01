@@ -11,7 +11,7 @@
 ### For Windows:
 
 1. Download Spark:
-   - Go to https://downloads.apache.org/spark/spark-3.5.2/spark-3.5.2-bin-hadoop3.tgz
+   - Go to https://downloads.apache.org/spark/spark-3.5.2/spark-3.5.2-bin-hadoop3.tgz or https://drive.google.com/drive/folders/1vZvYyxxCI2v9eglS6GzMHyGHhYCC_7-m?usp=sharing
 
 2. Extract the archive:
    - Move the Zip archive to C:\
