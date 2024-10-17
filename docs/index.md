@@ -46,11 +46,11 @@ Réfléchissez bien à ces éléments fondamentaux, car ils guideront le dévelo
 
 ⚠️ Evaluation du projet de groupe ⚠️: 
 - **Restitution oral**: /4
-- **Acquisition des données** :
+- **Acquisition des données**:
   - Excel/Csv/Json : +2 
   - Via call d'API : +3
   - En requêtant une BDD/Récupération depuis un stockage cloud: +5
-- **Traitement des données** : 
+- **Traitement des données**: 
   - Jupyter notebook/databricks en local : +4
   - Jupyter notebook connecté à un cluster : +6
 - **Stockage**:
