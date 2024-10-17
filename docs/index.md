@@ -39,10 +39,24 @@ Les étapes sont:
    - Esquissez votre vision de l'architecture finale.
    - Assurez-vous d'intégrer :
      * Un composant pour le traitement par lots
-     * Un module pour le traitement en temps réel
+     * Un module pour le traitement en temps réel (**facultatif**)
      * Un outil de visualisation dynamique des données
 
 Réfléchissez bien à ces éléments fondamentaux, car ils guideront le développement de votre projet tout au long du cours.
+
+⚠️ Evaluation du projet de groupe ⚠️: 
+- **Restitution oral**: /4
+- **Acquisition des données** :
+  - Excel/Csv/Json : +2 
+  - Via call d'API : +3
+  - En requêtant une BDD/Récupération depuis un stockage cloud: +5
+- **Traitement des données** : 
+  - Jupyter notebook/databricks en local : +4
+  - Jupyter notebook connecté à un cluster : +6
+- **Stockage**:
+  - Ccv/Json/Txt : +2
+  - BDD : +4
+- **Rapport PowerBI**: /2
 
 ## Les TPs
 Il comporte aussi des séances de travaux pratiques ou Hands-On sur les technologies suivantes:
