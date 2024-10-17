@@ -266,9 +266,6 @@ En big data les formats de fichiers jouent un rôle crucial dans le stockage, le
 ![alt text](img/cours3/format_choix.PNG)
 
 
-Certainly! I'll create a simplified comparison table focusing on Avro, ORC, and Parquet, highlighting their key characteristics, perks, and when to use each format.
-
-
 ##### Comparaison des principaux formats: Avro, Orc et Parquet:
 
 | Feature          | Avro                     | ORC                      | Parquet                 |
