@@ -71,7 +71,7 @@ Avantages du partitionnement :
 - Haute disponibilité : les partitions peuvent être répliquées
 
 
-![alt text](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_lossy/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9d00da63-c92c-46c4-8bb7-86f0adf769c6_1354x1536.gif)
+![alt text](img/cours5/image-1.png)
 
 
 Enfin, il est important de mentionner que Apache Kafka n'est pas doté d'une interface utilisateur intégrée. Cependant, il existe plusieurs outils tiers qui fournissent une interface utilisateur graphique (GUI) pour gérer, surveiller et interagir avec les clusters Kafka. Ces outils sont très populaires car ils simplifient le processus de visualisation des flux de données (data stream), la gestion des sujets, la surveillance des consommateurs et des producteurs, et même la résolution des problèmes. L'un des plus populaire est Conduktor.
