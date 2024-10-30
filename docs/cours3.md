@@ -1,6 +1,6 @@
 # Cours : SGBD et structure de données pour le Big Data
 
-# 1. Introduction
+# 1. Introduction 📌
 
 ### Définitions:
 
@@ -89,7 +89,7 @@ Par CPU:
 
 ![alt text](img/cours3/diagram-glossary-caching.svg)
 
-### 3.2) Structure de données au coeur des BDDs
+### 3.2) Structure de données au coeur des BDDs 📌
 
 Les index, les hachages et les arbres sont des structures de données utilisées dans les bases de données pour optimiser l'accès et la récupération des données. 
 
@@ -165,7 +165,7 @@ A noter que lorsque vous effectuer la commande: "CREATE INDEX" très souvent le 
 Certains SGBD comme PostgreSQL permettent d'avoir une approche hybride en offrant la possibilité de créer des index via fonctions de hachage et arbres (B-Trees). Bénéficiant ainsi des avantages de chacune des approches, mais comme on l'a vu cela augmentera la complexité de la gestion des index mais aussi le coût des opérations d'écritures. 
 
 
-# 4. Systèmes de stockage de données 
+# 4. Systèmes de stockage de données 📌
 
 ### 4.1) Différents systèmes 
 ##### Database 
@@ -205,7 +205,7 @@ Caractéristiques :
 
 
 
-# 5. Système de fichiers (File systems)
+# 5. Système de fichiers (File systems) 📌
 
 ### Definition: 
 Un **système de fichiers** est une méthode et une structure de données utilisées par les systèmes d'exploitation pour gérer et organiser les fichiers sur les périphériques de stockage (tels que les disques durs, les disques SSD, les clés USB, etc.). Il définit la manière dont les données sont stockées, récupérées et organisées, ce qui permet aux utilisateurs et aux applications d'accéder aux fichiers et de les manipuler efficacement. En principe, tout système de fichiers peut stocker n'importe quel format de fichier. Pour le système de fichiers, tous les fichiers ne sont que des séquences d'octets.
@@ -258,7 +258,7 @@ Dans le contexte du Big Data, les systèmes de fichiers traditionnels ne suffise
 		```
 
 
-# 6. Formats
+# 6. Formats 📌
 Les formats de fichiers définissent la manière dont les données sont structurées dans un fichier (par exemple, CSV, Parquet, JSON). C'est à l'application qui lit le fichier de comprendre et d'interpréter son format.
 
 En big data les formats de fichiers jouent un rôle crucial dans le stockage, le traitement et l'analyse des données. Des formats tels que Parquet, ORC et Avro sont conçus pour traiter efficacement de grands volumes de données dans les environnements big data. Il est essentiel de comprendre ces formats pour optimiser les flux de données, garantir l'intégrité des données et maximiser la vitesse de traitement.

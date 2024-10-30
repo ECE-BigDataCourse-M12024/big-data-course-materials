@@ -1,7 +1,7 @@
 
 # 1. Spark
 
-### 1.1) Introduction et comparaison avec Hadoop (MapReduce)
+### 1.1) Introduction et comparaison avec Hadoop (MapReduce) 📌
 
 **A. Introduction:**
 
@@ -59,7 +59,7 @@ L'architecture de Spark se compose de :
 	- **GraphX** : API pour le traitement de graphes. GraphX fournit un ETL, une analyse exploratoire et un calcul graphique itératif pour permettre aux utilisateurs de créer et de transformer de manière interactive une structure de données de graphe à grande échelle. Il est livré avec une API très flexible et une sélection d'algorithmes Graph distribués.
 
 
-### 1.2) Spark: concepts et fonctionnement
+### 1.2) Spark: concepts et fonctionnement 📌
 
 #### 1.2.1) RDD (Resilient Distributed Datasets)
 
@@ -74,7 +74,7 @@ Caractéristiques des RDD :
 - **Évalués paresseusement (lazy evaluation):** cela signifie que sont enregistrées les transformations à effectuer, mais que ceux-ci ne sont appliqués pour créer le résultat uniquement sur demande (lors d'une action cf la partie sur actions vs transformations). 
 - Peuvent être **mis en cache en mémoire** et réutilisable.
 
-#### 1.2.2) Dataframes & Datasets
+#### 1.2.2) Dataframes & Datasets 
 
 Les DataFrames et Datasets sont des abstractions introduites par la suite afin d'apporter plus de flexibilité, performance et fonctionnalités aux RDD. Elles sont de plus haut niveau que les RDD et s'appuient sur celles-ci (donc bénéficie des caractéristiques des RDDs). 
 Ces abstraction (via leur API respective) sont accessibles aux API spécifiques à un langage (Python, R, Java, Scala).
@@ -133,7 +133,7 @@ Comparaison :
 
 ### 1.3) Anatomie d'une application Spark
 
-#### 1.3.1) Principaux composants d'une application Spark
+#### 1.3.1) Principaux composants d'une application Spark 📌
 
 **Composants du cluster** :
 - Cluster Manager : Gère les ressources du cluster.
@@ -208,7 +208,7 @@ Résumé des étapes de communication entre Spark et un gestionnaire de cluster 
      * Pour le mode standalone : Protocoles internes de Spark
 
 
-#### 1.3.3) Modes
+#### 1.3.3) Modes 📌
 
 Deux modes de déploiement peuvent être utilisés pour soumettre des applications Spark à un cluster : le mode client et le mode cluster. 
 

@@ -1,6 +1,6 @@
 # Cours: Streaming
 
-# 1. Messaging Systems
+# 1. Messaging Systems 📌
 Les systèmes modernes génèrent et traitent des flux continus de données : transactions bancaires, activités sur les réseaux sociaux, capteurs IoT, ou encore logs d'applications. Pour gérer efficacement ces flux en temps réel, les systèmes de messagerie (messaging systems) jouent un rôle crucial.
 
 ### 1.1) Qu'est-ce qu'un système de messaging ?
@@ -39,7 +39,7 @@ Dans ce modèle (souvent appelé "pub/sub"), un producer publie des messages sur
 
 # 2. Kafka
 
-### 2.1) Introduction 
+### 2.1) Introduction 📌
 Apache Kafka est une **plateforme de streaming distribuée** qui permet de :
 - Publier et consommer des flux de données (comparable à un ***système de messaging***)
 - Stocker ces données de manière **durable et résiliente**
@@ -92,7 +92,7 @@ C'est là qu'intervient ZooKeeper, un service centralisé qui assure la coordina
 
 # 3. Stream data processing 
 
-### 3.1) Introduction 
+### 3.1) Introduction 📌
 
 Le traitement de flux (stream processing) représente une approche moderne du traitement de données. Il permet d'analyser et traiter les données en **temps réel**, dès leur création ou réception, contrairement au traitement par lots (batch processing) qui opère sur des ensembles de données à intervalles réguliers.
 
@@ -137,7 +137,7 @@ Retenez que:
 
 Apache Spark Streaming est un composant (API) de l'écosystème Apache Spark qui permet le traitement de données en temps réel. Cette extension du framework Spark permet aux développeurs de profiter des mêmes APIs (Spark Core, Spark SQL (DataFrame, DataSets), MLlib par exemple) que le traitement batch pour créer des applications de streaming, facilitant ainsi le développement d'applications temps réel à grande échelle.
 
-#### 3.3.1) Architecture et Fonctionnement de Base
+#### 3.3.1) Architecture et Fonctionnement de Base 📌
 Le principe fondamental de Spark Streaming repose sur sa capacité à traiter les données en continu. Différents modes de traitement sont possibles. Ceux-ci définissent **comment** les données sont traitées. 
 
 - Mode Batch: Bien que non considéré comme du "vrai" streaming, ce mode permet de traiter des données historiques en utilisant les mêmes APIs que le streaming. C'est particulièrement utile pour tester ou retraiter des données historiques.
@@ -147,7 +147,7 @@ Le principe fondamental de Spark Streaming repose sur sa capacité à traiter le
   
 - **Mode Continu**: Introduit de manière expérimentale dans Spark 2.3, ce mode vise à réduire la latence en traitant chaque enregistrement dès son arrivée. Il offre une garantie "at-least-once", signifiant qu'un enregistrement sera traité au moins une fois, parfois plus.
 
-#### 3.3.2) Interaction avec les Sources de Données
+#### 3.3.2) Interaction avec les Sources de Données 📌
 Spark Streaming propose plusieurs modes de lecture, particulièrement utiles lors de l'interaction avec des systèmes comme Apache Kafka :
 - Le mode **Assign** permet un contrôle précis en spécifiant exactement quelles partitions lire
 - Le mode **Subscribe** offre une approche plus flexible en s'abonnant à des topics spécifiques
@@ -156,7 +156,7 @@ Spark Streaming propose plusieurs modes de lecture, particulièrement utiles lor
   Logique de lecture des stream de données: 
 ![alt text](img/cours5/read_stream_data.png)
 
-#### 3.3.3) Mode de déclenchement
+#### 3.3.3) Mode de déclenchement 📌
 Le traitement des données est contrôlé par différents modes de déclenchement (Trigger Modes). Ceux-ci définissent **quand** le traitement est déclenché. 
 
 - Mode par **défaut**: Lance le traitement dès que le batch (lot) précédent est terminé
@@ -167,7 +167,7 @@ Le traitement des données est contrôlé par différents modes de déclenchemen
 Ex de déclenchement à intervalle fixe = toutes les 1 seconde:
 ![alt text](img/cours5/mode_declenchement_exemple.png)
 
-#### 3.3.4) Modes pour l'écriture en sortie
+#### 3.3.4) Modes pour l'écriture en sortie 📌
 Spark Streaming dispose de trois modes pour écrire les résultats :
 
 - Le mode **Complete** écrit l'intégralité des résultats à chaque fois, idéal pour des agrégations complètes.
@@ -183,10 +183,10 @@ Spark Streaming dispose de trois modes pour écrire les résultats :
 
 	Dans Spark Streaming, nous distinguons deux grandes familles d'opérations qui répondent à des besoins différents : les opérations sans état et les opérations avec état.
 
-	-Les Opérations **Sans État (Stateless)**:
+	-Les Opérations **Sans État (Stateless)**: 📌
 	Ces opérations sont les plus simples à appréhender car elles traitent chaque enregistrement de manière isolée, sans tenir compte du contexte ou des données précédentes. Imaginez un filtre qui ne laisse passer que les transactions supérieures à 1000€, ou une transformation qui convertit chaque température de Celsius en Fahrenheit. Ces opérations (filter, map, flatMap, select, where) sont simples, rapides et faciles à paralléliser car elles ne nécessitent pas de maintenir un contexte entre les traitements.
 	
-	-Les Opérations **Avec État (Stateful)**
+	-Les Opérations **Avec État (Stateful)** 📌
 	À l'inverse, les opérations avec état maintiennent un contexte au fil du temps. Elles sont plus complexes mais aussi plus puissantes. Prenez l'exemple d'un compteur de visites par utilisateur : il doit se souvenir des visites précédentes pour incrémenter le compteur correctement. Ces opérations (agrégations, compteurs cumulatifs, moyennes mobiles, déduplication de données) nécessitent une gestion particulière de la mémoire et des mécanismes de checkpoint pour garantir la fiabilité du traitement.
 	Ex: 
 	![alt text](img/cours5/groupby_stateful.PNG)

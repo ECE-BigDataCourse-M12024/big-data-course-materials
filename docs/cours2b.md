@@ -2,7 +2,7 @@
 
 ### 1.1 Définition et intérêt
 
-#### Qu'est-ce que PySpark ?
+#### Qu'est-ce que PySpark ? 📌
 
 PySpark est à la fois une bibliothèque Python et une API (Interface de Programmation d'Application) pour Apache Spark. 
 

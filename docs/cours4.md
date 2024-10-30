@@ -1,6 +1,6 @@
 # Cours : Architecture, Datavisualization & Cloud
 
-# 1. Architectures Big Data
+# 1. Architectures Big Data 📌
 
 L'architecture des données décrit comment les données sont traitées, stockées et utilisées dans un système d'information. Dans le cadre du Big Data, la volumétrie, vélocité, variété des données nous poussent à développer de nouvelles architectures répondant à ses nouveaux besoins. 
 
@@ -187,7 +187,7 @@ Parmi ces outils, Power BI de Microsoft s'est imposé comme l'un des leaders du 
 
 # 3. Cloud Computing
 
-### 3.1) Introduction
+### 3.1) Introduction 
 Le Cloud Computing fournit l'infrastructure nécessaire pour stocker, traiter et analyser de grandes quantités de données de manière efficace et économique.
 
 C'est un modèle qui permet un accès réseau (via internet) à la demande à un pool partagé de ressources informatiques configurables (réseaux, serveurs, stockage, applications et services) qui peuvent être rapidement provisionnées et libérées avec un minimum d'effort de gestion ou d'interaction avec le fournisseur de services.
@@ -196,14 +196,14 @@ C'est un modèle qui permet un accès réseau (via internet) à la demande à un
 
 >Selon Gartner, d'ici 2025, plus de 95% des nouvelles charges de travail numériques seront déployées sur des plateformes cloud natives. Cette tendance souligne l'importance croissante du cloud dans le paysage technologique moderne.
 
-**Principaux avantages :**
+**Principaux avantages :** 📌
 1. **Scalabilité** : Capacité à augmenter ou diminuer les ressources selon les besoins
 2. **Flexibilité** : Accès à une large gamme de services et de technologies
 3. **Réduction des coûts d'infrastructure** : Passage d'un modèle CAPEX à OPEX
 4. **Infogérance externalisée** : Permet aux équipes de se concentrer sur leur cœur de métier
 5. **Accès à des technologies de pointe** : Mises à jour automatiques et nouvelles fonctionnalités
 
-**Concepts lié au cloud à avoir en tête :**
+**Concepts lié au cloud à avoir en tête :** 
 - **SLA** (Service Level Agreement) : Contrat définissant la qualité de service garantie par le fournisseur cloud. Il est crucial de bien comprendre ces accords pour assurer la disponibilité et la performance des services. Chaque servicedispose de son propre SLA, avec les conditions, les limitations et les crédits de service qui lui sont associés. Certains services (gratuits) n'ont pas de SLA. 
 >Par ex: sur Azure, le SLA commence à 95% pour les machines virtuelles à instance unique utilisant des disques durs standard et va jusqu'à 99,99% pour les machines virtuelles multi-instances déployées sur deux zones de disponibilité ou plus dans la même région Azure.
 >Lien vers un dashboard présentant les SLA par service sur Azure: https://azurecharts.com/sla
@@ -216,7 +216,7 @@ C'est un modèle qui permet un accès réseau (via internet) à la demande à un
 ![alt text](img/cours4//aws-azure-gcp.jpg)
 
 
-### 3.2) Logique de fonctionnement
+### 3.2) Logique de fonctionnement 📌
 
 Les fournisseurs de services Cloud ont généralement la même logique de fonctionnement. Il est crucial de bien comprendre les éléments suivants et à quoi ils servent (car transverses).
 
@@ -232,7 +232,7 @@ Les fournisseurs de services Cloud ont généralement la même logique de foncti
 
 
 
-### 3.2 Services cloud principaux 
+### 3.3 Services cloud principaux 
 
 Principaux services cloud utilisés dans le cadre du Big Data:
 
@@ -253,7 +253,7 @@ Principaux services cloud utilisés dans le cadre du Big Data:
 7. Networking : VNet, Load Balancer, VPN (ex: Azure Virtual Network pour isoler et sécuriser les ressources)
 
 
-### 3.3 Accès aux ressources de stockage cloud
+### 3.4 Accès aux ressources de stockage cloud
 
 L'accès aux ressources de stockage cloud se fait généralement via des URL standardisées. 
 
@@ -271,7 +271,7 @@ L'accès aux ressources de stockage cloud se fait généralement via des URL sta
 En fonction des ressources (compute, network etc...) la structure n'est pas la même. 
 L'avantage de la structure standardisée, c'est que ça facilite l'intégration et l'automatisation des accès aux ressources cloud.
 
-### 3.4 Interface Azure Portal
+### 3.5 Interface Azure Portal
 
 Le [portail Azure](https://portal.azure.com/#allservices/category/All) fournit une interface graphique pour gérer toutes les ressources cloud :
 

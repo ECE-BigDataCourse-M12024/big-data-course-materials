@@ -20,7 +20,7 @@ Quelques statistiques intéressantes :
 - Une personne moyenne génère 1,7 Mo de données par seconde.
 - 90 % des données mondiales ont été créées au cours des deux dernières années.
 
-Les 5 V du Big Data :
+📌Les 5 V du Big Data :
 - **Volume**: La quantité massive de données générées et stockées.
 - **Vélocité**: La vitesse à laquelle les nouvelles données sont générées et circulent, souvent en temps réel ou quasi-réel.
 - **Variété**: La diversité des types de données, structurées, semi-structurées et non structurées, provenant de sources multiples.
@@ -49,7 +49,7 @@ De l'autre, sa gestion comporte de nombreux **défis**:
 Le Big Data a révolutionné le paysage économique, touchant pratiquement tous les secteurs d'activité. Son influence s'étend bien au-delà de la technologie, transformant profondément des industries diverses (Pharmaceutique, Automobile, Retail, Energie, Agriculture, Luxe, Banque etc....)
 
 
-**C. Cycle de vie de la donnée:**
+📌**C. Cycle de vie de la donnée:**
 La donnée étant la composante de base du Big Data, il est essentiel de comprendre son cycle de vie. Les ingénieurs en Big Data seront amené à intervenir à chaque étape de ce cycle.
 
 -1. Génération/Carthographie des sources > 2. Collecte et acquisition > 3. Stockage > 4. Traitement > 5. management (conformité, qualité, uniformisation, confidentialité etc...) > 6. Analyse > 7. Interprétation et visualisation > 8. Archivage/Suppression
@@ -57,7 +57,7 @@ La donnée étant la composante de base du Big Data, il est essentiel de compren
 ![alt text](img/cours1/data_lifecycle_mgt.PNG)
 
 
-**D. Familles d'outil :**
+📌**D. Familles d'outil :**
 A chaque étape du parcours de la donnée fait intervenir un/des outillage(s) spécifique(s).
 On peut classer les outils de Big Data dans les familles suivantes: 
 - Outils d'ingestion/collecte de données: Connecteurs de base de données (ex: jdbc, odbc ...), Airbyte, Kafka, Spark, Flume, Logstash ...
@@ -71,7 +71,7 @@ On peut classer les outils de Big Data dans les familles suivantes:
 
 ### 1.2) Quelques concepts clés: 
 
-**A. Concepts généraux:**
+📌**A. Concepts généraux:**
 - **Représentation binaire:** tous les fichiers, quelle que soit leur nature (image, vidéo, texte, son etc...), sont en format binaire au niveau le plus bas du stockage. Donc lorsque HDFS ou tout autre programme manipule les fichiers d'entrée, ils manipulent la représentation binaire de ceux-ci.
   
 - **Source code, bytecode, machine code**:
@@ -177,14 +177,14 @@ On peut classer les outils de Big Data dans les familles suivantes:
 	![alt text](img/cours1/program_process_threads_diff.png)
 
 
-- **Single machine, cloud & distributed computing:**
+- 📌**Single machine, cloud & distributed computing:**
 	- Single machine computing (multi-tasks vs multicore parallelism) : 
 		- Multi-tasking: la capacité de notre machine à traiter plusieurs tâches liées à des programmes différents. Le multitâche donne l'illusion de parallélisme par commutation rapide (en sautant d'une tâche à l'autre).
 		- Le parallélisme multicœur: exécution en parallèle et simultanée sur différents cœurs de tâches liées à des programmes différents. 
 	- Cloud computing: pratique consistant à utiliser un/des serveur(s) informatique(s) à distance, hébergé(s) dans des centres de données connectés à Internet pour stocker, gérer et traiter des données, plutôt qu'un serveur local ou un ordinateur personnel.
 	- Distributed computing : méthode qui consiste à faire travailler ensemble plusieurs ordinateurs en réseau afin de résoudre un problème commun. Le problème étant divisé en plusieurs tâches, chacune d'elles est résolue par un ou plusieurs ordinateurs qui communiquent entre eux.
 
-- **Vertical scaling vs Horizontal scaling:** 
+- 📌**Vertical scaling vs Horizontal scaling:** 
   Le scaling vertical consiste à augmenter les ressources d'une seule machine, tandis que le scaling horizontal implique l'ajout de machines supplémentaires à un système distribué.
 
 
@@ -195,7 +195,7 @@ On peut classer les outils de Big Data dans les familles suivantes:
 
 # 2. Hadoop 
 
-**Hadoop** est un :
+📌**Hadoop** est un :
 - **framework**: 'cadre de travail' composé d'un ensemble de bibliothèques, d'outils, de conventions de codage, et de modèles de conception qui simplifient et accélèrent le processus de développement logiciel
 - **open-source**: conçu pour être accessible au public, n'importe qui peut voir, modifier et distribuer le code comme il l'entend.
 - conçu pour le stockage et le traitement distribué de grandes quantités de données (Big Data) sur des clusters de machines ordinaires. 
@@ -208,7 +208,7 @@ Hadoop sert principalement à :
 4. Permettre une scalabilité horizontale facile (ajout de nouvelles machines au cluster).
 
 
-Hadoop a une topologie dite "maître-esclave"(master-slave en anglais). 
+📌Hadoop a une topologie dite "maître-esclave"(master-slave en anglais). 
 Dans cette topologie, nous avons _un nœud maître et plusieurs nœuds esclaves_. 
 -La fonction du nœud maître (master node) est d'assigner une tâche aux différents nœuds esclaves et de gérer les ressources. Il stocke les métadonnées, à savoir les informations relatives aux données stockés (comme l'emplacement des blocs/partitions à travers le réseau de noeuds esclaves).
 -Les nœuds esclaves (slave nodes) effectuent le calcul proprement dit. Ils sont aussi ceux qui stockent les données réelles.
@@ -221,7 +221,7 @@ L'écosystème Hadoop comprend un ensemble de projets et d'outils complémentair
 
 ![alt text](img/cours1/hadoop_architecture.PNG)
 
-Les composants prinicipaux de cet écosystème: 
+📌Les composants prinicipaux de cet écosystème: 
 – **HDFS** est utilisé pour distribuer de grands ensembles de données
 – YARN (Yet Another Resource Negotiator) : une sorte de système d'exploitation pour Hadoop. Introduit dans Hadoop 2.0, il gère les ressources du cluster, permet l'exécution d'applications distribuées autres que MapReduce sur le cluster Hadoop (ex: Spark, Hive, Pig etc...). 
 – **MapReduce** application utilisée pour distribuer une tâche de calcul à un ensemble de données distribuées.
@@ -241,7 +241,7 @@ Autres composants importants:
 
 ### 2.2) HDFS, MapReduce et YARN
 
-#### 2.2.1) HDFS
+#### 2.2.1) HDFS 📌
 HDFS signifie Système de Fichiers Distribués Hadoop (Hadoop Distributed File System, un 'File System' est une méthode et une structure de données (arborescente) que le système d'exploitation utilise pour contrôler la manière dont les données sont stockées et récupérées sur un dispositif de stockage, tel qu'un disque dur, un disque SSD ou même un stockage en nuage.). 
 Il assure le **stockage des données sur Hadoop**. Toutes donnée stockée est subdivisée par HDFS  en unités plus petites appelées blocs puis opère à son stockage **sur disque** de manière distribuée (ie réparti sur plusieurs machines/noeuds). 
 
@@ -253,7 +253,7 @@ Pour fonctionner, HDFS s'appuie sur 2 daemons:
 ![alt text](img/cours1/name_data_node_architecture.PNG)
 
 Aspects clés du fonctionnement de HDFS:
-- **Block Protocol**:
+- 📌**Block Protocol**:
     - HDFS traite tous les fichiers comme des données binaires. Il ne fait pas de distinction entre les types de fichiers lorsqu'il les divise en blocs. L'application qui lit les données de HDFS est chargée de les interpréter correctement.
     - HDFS divise les fichiers en blocs (typiquement 128 Mo ou 256 Mo). Chaque bloc est répliqué sur plusieurs nœuds esclaves (le facteur de réplication par défaut est de 3 = 1 primaire + 2 répliques).
     
@@ -274,7 +274,7 @@ Aspects clés du fonctionnement de HDFS:
     - HDFS comprend un équilibreur qui redistribue les données entre les DataNodes afin de maintenir une distribution uniforme. Ce qui implique que plusieurs blocks ou partitions peuvent se retrouver sur le même noeud esclave (slave node). 
 
 
-#### 2.2.2) MapReduce
+#### 2.2.2) MapReduce 📌
 MapReduce est la couche (par défaut) de traitement des données de Hadoop.
 C'est aussi un modèle de programmation conçu pour traiter et transformer de grands volumes de données en parallèle. L'idée étant que l'utilisateur développe une application Hadoop en s'appuyant sur le modèle MapReduce qui permet ainsi la parallélisation des jobs de l'application sur un ensemble de machines. 
 
@@ -291,7 +291,7 @@ NB: A noter que les résultats intermédiaires tout comme finaux sont stockés s
 
 Un exemple classique est le programme WordCount (que nous verrons lors du TP1). La fonction Map émet un 1 pour chaque mot rencontré. La fonction Reduce somme ces 1 pour chaque mot unique, donnant ainsi le compte total de chaque mot dans le texte.
 
-#### 2.2.3) YARN
+#### 2.2.3) YARN 📌
 YARN (Yet Another Resource Negotiator) est le gestionnaire de ressources et planificateur de tâches du framework Hadoop. Il a été conçu pour séparer la gestion des ressources du traitement des données, offrant ainsi une plus grande flexibilité et efficacité dans l'utilisation des ressources du cluster. Yarn se charge de l'allocation de conteneurs ie de ressource pour le traitement et calcul (CPU et mémoire). 
 
 Yarn divise les tâches de gestion des ressources et de planification/surveillance des travaux en 2 daemons distincts: 
